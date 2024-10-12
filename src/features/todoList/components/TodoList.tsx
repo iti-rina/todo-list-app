@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
-import { selectAllTodosIds } from '../../addTodo/model';
-import TodoItem from './ToDoItem';
+import TodoItem from './TodoItem';
+import { selectFilteredTaskIds } from '../../filterTodos/model';
 
 const TodoList = () => {
-  const allTodosIds = useSelector(selectAllTodosIds) || [];
+  const allTodosIds = useSelector(selectFilteredTaskIds) || [];
 
 
   return (
