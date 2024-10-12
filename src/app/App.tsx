@@ -1,7 +1,10 @@
-const App = () => {
+import { FC } from 'react';
+import { MainPage } from '../pages';
+
+const App: FC = () => {
 
   return (
-    <div>App</div>
+    <MainPage />
   )
 }
 
