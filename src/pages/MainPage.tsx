@@ -1,4 +1,5 @@
 import { AddTodoForm } from '../features/addTodo/ui';
+import { FiltersController } from '../features/filterTodos/ui';
 import { TodoList } from '../features/todoList/components';
 
 const MainPage = () => {
@@ -6,6 +7,7 @@ const MainPage = () => {
     <main>
       <AddTodoForm />
       <TodoList />
+      <FiltersController />
     </main>
   );
 }
