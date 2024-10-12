@@ -1,3 +1,3 @@
-import todosReducer, { addTodo, selectAllTodosIds, selectTodoById } from './todosSlice';
+import todosReducer, { addTodo, selectAllTodosIds, selectTodoById, selectAllTodos } from './todosSlice';
 
-export { todosReducer, addTodo, selectAllTodosIds, selectTodoById };
+export { todosReducer, addTodo, selectAllTodosIds, selectTodoById, selectAllTodos };
