@@ -1,4 +1,5 @@
 import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
+import type { RootState } from '../../../app/store';
 
 type Todo = {
   id: string;
@@ -31,5 +32,6 @@ const todosSlice = createSlice({
 });
 
 export const { addTodo } = todosSlice.actions;
+export const { selectAll: selectAllTodos, selectById: selectTodoById } = todosAdapter.getSelectors((state: RootState) => state.todos);
 
 export default todosSlice.reducer;
