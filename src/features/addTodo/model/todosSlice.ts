@@ -9,9 +9,9 @@ type Todo = {
 
 // Моковые данные, для удобства отладки
 const initialTodos: Todo[] = [
-  { id: 'edc39aa9-3eec-41ed-82dc-27ec8d6b9661', title: 'Learn Redux Toolkit', isSelected: false },
-  { id: 'a65cf47c-0665-432a-8448-bb6f81a2a4e4', title: 'Setup project with Tailwind CSS', isSelected: false },
-  { id: '4dac7fa3-60f2-4c6e-99a3-c2d94805d690', title: 'Build To-Do List App', isSelected: false },
+  { id: 'edc39aa9-3eec-41ed-82dc-27ec8d6b9661', title: 'Убрать в комнате', isSelected: false },
+  { id: 'a65cf47c-0665-432a-8448-bb6f81a2a4e4', title: 'Сходить в магазин', isSelected: false },
+  { id: '4dac7fa3-60f2-4c6e-99a3-c2d94805d690', title: 'Погулять с собакой', isSelected: false },
 ];
 
 
@@ -32,6 +32,6 @@ const todosSlice = createSlice({
 });
 
 export const { addTodo } = todosSlice.actions;
-export const { selectAll: selectAllTodos, selectById: selectTodoById } = todosAdapter.getSelectors((state: RootState) => state.todos);
+export const { selectById: selectTodoById, selectIds: selectAllTodosIds } = todosAdapter.getSelectors((state: RootState) => state.todos);
 
 export default todosSlice.reducer;
