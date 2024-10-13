@@ -15,7 +15,6 @@ const TodoItem: FC<TodoProps> = ({ todoId }) => {
 
   const handleTodoSelection = (e: MouseEvent <HTMLElement>) => {
     e.stopPropagation();
-    console.log(e.target);
     dispatch(toggleTodoSelect({id, changes: {isSelected: !isSelected}}))
   }
 
