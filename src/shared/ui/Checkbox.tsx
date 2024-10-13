@@ -1,17 +1,20 @@
-import { FC } from 'react';
+import { FC, ChangeEvent } from 'react';
 
 type CheckboxProps = {
   checked: boolean;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
-const Checkbox: FC<CheckboxProps> = ({ checked }) => {
+
+const Checkbox: FC<CheckboxProps> = ({ checked, onChange }) => {
 
   return (
-    <div>
-      <label>
+    <label onClick={(e) => e.stopPropagation()}>
         <input
           type='checkbox'
           className='hidden'
           tabIndex={0}
+          onChange={onChange}
+          checked={checked}
         />
       <span
         className={`w-6 h-6 flex items-center justify-center border-2 rounded ${checked ? 'bg-bg-2 border-none' : 'border-gray-400'}`}
@@ -27,8 +30,7 @@ const Checkbox: FC<CheckboxProps> = ({ checked }) => {
           </svg>
         )}
       </span>
-      </label>
-  </div>
+    </label>
   );
 }
 
