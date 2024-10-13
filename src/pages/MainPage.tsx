@@ -4,11 +4,16 @@ import { Controllers } from '../widgets/ui';
 
 const MainPage = () => {
   return (
-    <main>
-      <AddTodoForm />
-      <TodoList />
-      <Controllers />
-    </main>
+    <>
+      <header>
+        <h1>TODOS</h1>
+      </header>
+      <main>
+        <AddTodoForm />
+        <TodoList />
+        <Controllers />
+      </main>
+    </>
   );
 }
 
