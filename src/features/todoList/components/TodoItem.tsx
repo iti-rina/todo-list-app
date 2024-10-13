@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, MouseEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../app';
-import { toggleTodoSelect, selectTodoById } from '../../addTodo/model';
+import { toggleTodoSelect, removeTodo, selectTodoById } from '../../addTodo/model';
 type TodoProps = {
   todoId: string
 }
@@ -15,11 +15,17 @@ const TodoItem: FC<TodoProps> = ({ todoId }) => {
     dispatch(toggleTodoSelect({id, changes: {isSelected: !isSelected}}))
   }
 
+  const handleRemoveOne = (e: MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    dispatch(removeTodo(id));
+  }
+
 
 
   return (
     <li onClick={handleTodoSelection} style={isSelected ? {'textDecoration': 'line-through'} : {}} >
       {title}
+      <button onClick={handleRemoveOne}>Remove</button>
     </li>
   );
 }
