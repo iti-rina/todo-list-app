@@ -2,6 +2,7 @@ import { useState, MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { addTodo } from '../../todoList/model';
+import { AddBtn } from '../../../shared/ui';
 
 const AddTodoForm = () => {
   const dispatch = useDispatch();
@@ -20,18 +21,17 @@ const AddTodoForm = () => {
   }
 
   return (
-    <div>
-      <form>
+    <div className='bg-white rounded-lg pr-5'>
+      <form className='rounded-lg flex justify-between w-full h-16 text-lg text-gray-700 align-middle bg-white appearance-none focus:outline-none focus:shadow-outline'>
         <input 
           type='text'
           value={inputText}
           onChange={e => setInputText(e.target.value)}
           placeholder='Add new todo'
           maxLength={180}
+          className='flex-1 rounded-lg pl-10 focus:outline-none focus:shadow-outline'
         />
-        <button onClick={handleTaskSave}>
-          Добавить
-        </button>
+        <AddBtn onClick={handleTaskSave} />
       </form>
     </div>
   );
