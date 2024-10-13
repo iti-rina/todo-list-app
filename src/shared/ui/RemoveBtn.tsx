@@ -5,21 +5,20 @@ const RemoveBtn: FC<BtnProps> = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="w-6 h-6 flex items-center justify-center bg-blue-500 text-white rounded-full hover:bg-red-600 transition"
-      aria-label="Delete"
+      className='w-6 h-6 flex items-center justify-center  text-white rounded-full  transition'
+      aria-label='Delete'
     >
       <svg
-        className="w-4 h-4"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+        className='w-4 h-4 stroke-bg-2 hover:stroke-bg-1'
+        fill='none'
+        viewBox='0 0 24 24'
+        xmlns='http://www.w3.org/2000/svg'
       >
         <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M6 18L18 6M6 6l12 12"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M6 18L18 6M6 6l12 12'
         ></path>
       </svg>
     </button>
