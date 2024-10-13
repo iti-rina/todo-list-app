@@ -6,6 +6,7 @@
   "scripts": {
     "start": "vite",
     "build": "tsc -b && vite build",
+    "build-for-ci": "tsc -b && vite build --base=/todo-list-app/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
