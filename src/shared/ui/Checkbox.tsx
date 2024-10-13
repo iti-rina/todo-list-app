@@ -14,7 +14,7 @@ const Checkbox: FC<CheckboxProps> = ({ checked }) => {
           tabIndex={0}
         />
       <span
-        className={`w-6 h-6 flex items-center justify-center border-2 rounded ${checked ? 'bg-blue-500 border-blue-500' : 'border-gray-400'}`}
+        className={`w-6 h-6 flex items-center justify-center border-2 rounded ${checked ? 'bg-bg-2 border-none' : 'border-gray-400'}`}
       >
         {checked && (
           <svg
