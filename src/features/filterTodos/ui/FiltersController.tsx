@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import { statusFilters } from '../model';
-import { useDispatch } from 'react-redux';
-import { statusFilterChanged } from '../model/filtersSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { statusFilterChanged, selectStatus } from '../model/filtersSlice';
 
 
 
 const FiltersController:FC = () => {
   const dispatch = useDispatch();
+  const currentStatus = useSelector(selectStatus);
 
   const handleStatusFilterChanged = (status: string) => {
     dispatch(statusFilterChanged(status));
@@ -18,6 +19,7 @@ const FiltersController:FC = () => {
       <button 
         onClick={handleClick}
         key={key}
+        className={`capitalize hover:underline ${value === currentStatus ? 'underline' : ''}`}
       >
         {value}
       </button>
@@ -25,7 +27,7 @@ const FiltersController:FC = () => {
   });
 
   return (
-    <div>
+    <div className='flex justify-between gap-x-5 text-white'>
       {renderedFilters}
     </div>
   );
