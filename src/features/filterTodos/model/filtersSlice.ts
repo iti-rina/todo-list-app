@@ -40,9 +40,19 @@ export const selectFilteredTasks = createSelector(
   }
 );
 
+export const selectCompleted = createSelector(
+  selectAllTodos, 
+  filteredCompleted => filteredCompleted.filter(todo => todo.isSelected).map(todo => todo.id)
+);
+
 export const selectFilteredTaskIds = createSelector(
   selectFilteredTasks,
   filteredTasks => filteredTasks.map(task => task.id)
+);
+
+export const selectActive = createSelector(
+  selectAllTodos,
+  filteredAll => filteredAll.filter(todo => !todo.isSelected)
 );
 
 export default filtersSlice.reducer;
