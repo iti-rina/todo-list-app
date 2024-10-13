@@ -1,9 +1,7 @@
 import { FC } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTodoById } from '../../addTodo/model/todosSlice';
 import { RootState } from '../../../app';
-import { toggleTodoSelect } from '../../addTodo/model/todosSlice';
-
+import { toggleTodoSelect, selectTodoById } from '../../addTodo/model';
 type TodoProps = {
   todoId: string
 }
