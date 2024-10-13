@@ -2,6 +2,7 @@ import { FC, MouseEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../app';
 import { toggleTodoSelect, removeTodo, selectTodoById } from '../model';
+import { Checkbox, RemoveBtn } from '../../../shared/ui';
 type TodoProps = {
   todoId: string
 }
@@ -23,9 +24,10 @@ const TodoItem: FC<TodoProps> = ({ todoId }) => {
 
 
   return (
-    <li onClick={handleTodoSelection} style={isSelected ? {'textDecoration': 'line-through'} : {}} >
-      {title}
-      <button onClick={handleRemoveOne}>Remove</button>
+    <li onClick={handleTodoSelection} className='flex w-full min-h-16 px-6 items-center shadow appearance-none gap-6' >
+      <Checkbox checked={isSelected} />
+      <p className={`text-lg text-gray-700	 ${isSelected ? 'line-through' : ''} flex-grow hover:text-bg-2 text-ellipsis overflow-hidden`}>{title}</p>
+      <RemoveBtn onClick={handleRemoveOne} />
     </li>
   );
 }
