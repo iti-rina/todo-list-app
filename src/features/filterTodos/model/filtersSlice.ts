@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { createSelector } from '@reduxjs/toolkit';
-import { selectAllTodos } from '../../addTodo/model';
+import { selectAllTodos } from '../../todoList/model';
 import type { RootState } from '../../../app';
 
 export const statusFilters = {

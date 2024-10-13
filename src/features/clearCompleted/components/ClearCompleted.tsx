@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCompleted } from '../../filterTodos/model';
-import { removeSome } from '../../addTodo/model';
+import { removeSome } from '../../todoList/model';
 
 
 const ClearCompleted: FC = () => {

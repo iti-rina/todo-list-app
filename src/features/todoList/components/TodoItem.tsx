@@ -1,7 +1,7 @@
 import { FC, MouseEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../app';
-import { toggleTodoSelect, removeTodo, selectTodoById } from '../../addTodo/model';
+import { toggleTodoSelect, removeTodo, selectTodoById } from '../model';
 type TodoProps = {
   todoId: string
 }

@@ -1,7 +1,7 @@
 import { useState, MouseEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addTodo } from '../model';
+import { addTodo } from '../../todoList/model';
 
 const AddTodoForm = () => {
   const dispatch = useDispatch();

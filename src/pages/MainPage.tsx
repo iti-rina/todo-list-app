@@ -1,4 +1,4 @@
-import { AddTodoForm } from '../features/addTodo/ui';
+import { AddTodoForm } from '../features/addTodo/components';
 import { TodoList } from '../features/todoList/components';
 import { Controllers } from '../widgets/ui';
 
