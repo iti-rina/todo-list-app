@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { filtersReducer, statusFilterChanged, selectCompleted } from '.';
 
-describe('todoSlice reducer', () => {
+describe('filtersSlice reducer', () => {
   it('should change status in state', () => {
     const initialState = { "status": 'all' };
 
