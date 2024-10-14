@@ -13,7 +13,7 @@
 
 - [Использование Feature-Sliced Design](./docs/adrs/001-feature-sliced-design.md)
 - [Выбор бандлера для проекта](./docs/adrs/002-module-bundler.md)
-- [Использование Vitest в качестве test runner](./docs/adrs/003-state-manager.md)
+- [Использование Vitest в качестве test runner](./docs/adrs/003-vitest-as-test-runner.md)
 - [Использование createEntityAdapter](./docs/adrs/004-createEntityAdapter.md)
 - [Сборка проекта с использованием Docker](./docs/adrs/005-project-building.md)
 
